@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# TechHr
+# Is employee managenent system
+>>>>>>> c2fa7c78e30ab82bfdfe8450296bb897d75ac5a6
