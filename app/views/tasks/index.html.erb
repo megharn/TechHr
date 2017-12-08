@@ -1,0 +1,36 @@
+
+<% if current_user %>
+<html>
+	<body>
+		<p style="text-align:right;"><%= link_to "sign_out",before_log_out_user_path(id: current_user)%>
+.</p>
+	</body>
+</html>
+
+<%end%>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>start_date</th>
+		<th>end_date</th>
+		<th>status</th>
+		<th>completed_date</th>
+		
+	</tr>
+	<% @tasks.each do |task|%>
+	<tr>
+		<td><%= link_to task.name,task_path(task)%></td>		
+		<td><%= task.start_date%></td>
+		<td><%= task.end_date%></td>
+		<td><%= task.status%></td>
+		<td><%if (task.status == "completed")%><%= task.completed_date%>
+			<%elsif (task.status == "progress")%><%=(button_to "Show", task_path(task), method: :get) %>
+			<%else%><%= (button_to "Start", task_open_task_path(task.id), method: :get) %>
+			<%end%>				
+		</td>
+		
+	</tr>
+	<%end%>
+
+
+</table>

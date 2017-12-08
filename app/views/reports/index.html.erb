@@ -1,0 +1,26 @@
+<table>
+	<tr>
+		<th> developer </th>
+		<th> total task </th>
+		<th> total leave </th>
+		<th> weak end days</th>
+		<th> total work days </th>
+		<th> total working hours </th>
+		
+
+		<th>   </th>
+	</tr>
+	 <% @users.each do |user|%> 
+	<tr>		
+		<td><%=user.first_name %></td>
+		<td><%=user.tasks.count %></td>
+		<td><%=user.user_logs.pluck(:user_status).compact.length%></td>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		<td><%=link_to "show",report_path(user) %></td>
+	
+	</tr>
+	<%end%>
+
+</table>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total_leave: MyString
+  total_working_days: MyString
+  total_weakend_days: MyString
+  total_working_hours: MyString
+
+two:
+  total_leave: MyString
+  total_working_days: MyString
+  total_weakend_days: MyString
+  total_working_hours: MyString

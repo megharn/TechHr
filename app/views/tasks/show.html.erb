@@ -1,0 +1,38 @@
+
+
+Name:    <%=@task.name%><br/>
+status:  <%=@task.status%><br/>
+start_date: <%=@task.start_date%><br/>
+end_date: <%=@task.end_date%><br/>
+completed_date: <%=@task.completed_date%><br/>
+description:  <%= @task.description %><br/>
+ <%if !(@task.status == "completed")%>
+
+	<%=button_to"completed", task_complete_task_path(@task), method: :get %>
+
+ <%end%>
+	<% if !((@task.status == "hold") || (@task.status == "completed"))%>
+		<%=link_to"hold", task_hold_task_path(@task), method: :get %>
+	<%end%>
+
+		<%= form_for Comment.new  do |f| %>
+
+			comment:<%= f.text_area :comment %><br/>
+			<%= f.hidden_field :task_id, value: @task.id %>
+			<%= submit_tag "Submit " %>  
+		<%end%>
+			<% @task.comments.each do |comment|%>
+				<p><%=comment.comment%><p>
+			<%end%>
+
+
+
+  
+ 
+
+
+
+
+
+
+

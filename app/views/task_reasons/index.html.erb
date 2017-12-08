@@ -1,0 +1,14 @@
+<table>
+	<tr>
+		<th> User_id</th>
+		<th> Task_id</th>
+		<th> Reasons</th>
+	</tr>
+	<% @task_reasons.each do |task_reason| %>
+	<tr>
+		<td><%=task_reason.user.first_name%></td>
+		<td><%=task_reason.task.try(:name)%></td>
+		<td><%=task_reason.reasons%></td>
+	</tr>
+	<%end%>
+</table>

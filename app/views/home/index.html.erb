@@ -1,0 +1,41 @@
+<% if current_user %>
+	<%= current_user.email %>
+	<%= link_to "sign_out",before_log_out_user_path(id: current_user)%>>
+<%else%>
+	<%= link_to "log_in",new_user_session_path %>
+<%end%>
+
+<h2>WelCome To TechHr </h2>
+ 	hi    <%= current_user.first_name %>
+          <%=link_to "Task",tasks_path%>
+		<% if current_user.is_admin? %>
+ 		  <%= link_to "Admin",admin_dashboard_path %>
+    <%end%>
+
+		<% if !(current_user.communication_address && current_user.permanent_address && current_user.blood_group) %>
+ 			<%= link_to "complete the registration",edit_user_path(current_user) %>
+		<%end%>
+ 		<%= link_to "change password",edit_user_registration_path%>
+ 			
+ 	 
+ 		<%#= link_to "status",edit_task_path(task_id: task.id)%>
+
+
+ 			     
+
+
+
+
+ 
+ 
+
+ 
+
+
+ 
+
+
+
+
+
+

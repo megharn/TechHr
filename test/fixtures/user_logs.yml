@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  log_in_time: 2017-11-15 12:26:22
+  sign_out_time: 2017-11-15 12:26:22
+
+two:
+  log_in_time: 2017-11-15 12:26:22
+  sign_out_time: 2017-11-15 12:26:22

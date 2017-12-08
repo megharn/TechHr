@@ -1,0 +1,14 @@
+<%= form_for @user do |f| %>
+  
+ 
+
+  communication_address: <%= f.text_area :communication_address %><br />
+  permanent_address : <%= f.text_area :permanent_address %><br />
+  blood_group : <%= f.text_field :blood_group %><br />
+ 
+ <%= submit_tag "Submit " %>
+ 
+
+  
+
+ <%end%>

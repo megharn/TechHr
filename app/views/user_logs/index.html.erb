@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<th> User id</th>
+		<th> Login Time</th>
+		<th> Sign out Time</th>
+		<th> user_status </th>
+	</tr>
+
+	<% @user_logs.each do |user_log| %>
+	<tr>
+
+	<td><%=user_log.user.first_name%></td>	
+	<td><%=user_log.log_in_time%></td>
+	<td><%=user_log.sign_out_time%></td>
+	<td><%=user_log.user_status%></td>
+    </tr>
+	<%end%>
+</table>

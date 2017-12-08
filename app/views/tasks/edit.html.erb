@@ -1,0 +1,7 @@
+<%= form_for @task do |f| %> 
+  status : <%= f.select :status, [['progress'],['open'],['completed'],['hold']] %><br />
+   
+ 
+ <%= submit_tag "Submit " %>  
+
+<%end%>

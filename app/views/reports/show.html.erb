@@ -1,0 +1,22 @@
+<%=@user.first_name%>
+<table>
+	<tr>
+		<th> Task Name</th>
+		<th> Task Status</th>
+		<th> Task Start date</th>
+		<th> Task End date </th>
+		<th> Task Completed Date</th>
+		<th> Total days</th>
+	</tr>
+<% @user.tasks.each do |task|%>
+   <tr> 
+   	<td><%=task.name%></td>
+		<td><%=task.status%></td>
+		<td><%=task.start_date%></td>
+		<td><%=task.end_date%></td>
+		<td><%if (task.status == "completed")%><%=task.completed_date%><%end%></td>
+		<td><%if (task.status == "completed")%><%=(task.completed_date - task.start_date).to_i%><%end%></td>
+
+		</tr>
+	<%end%>
+</table>
